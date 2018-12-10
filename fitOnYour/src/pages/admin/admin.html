@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar>
+     <ion-title class="main">
+        <span class="main1">Admin Page</span> 
+        <button (click)="logOut()" icon-only ion-button class="logout">
+           <ion-icon
+              ios="ios-log-out" md="md-log-out"></ion-icon>
+        </button>
+     </ion-title>
+  </ion-navbar>
+  <ion-segment color="primary">
+     <ion-segment-button value="Shop_details" (click)="selectedTab(0)">
+        Shop details
+     </ion-segment-button>
+     <ion-segment-button value="Analaysing" (click)="selectedTab(1)">
+        Analaysing
+     </ion-segment-button>
+  </ion-segment>
+</ion-header>
+<ion-content padding>
+  <ion-slides #slider>
+     <ion-slide>
+        <ion-title class="shopTitle"><span class="shopTitle1">Shop Details</span></ion-title>
+        <ion-card class="shopD">
+           <ion-row *ngFor="let shop of getShopDetails | async">
+              {{shop.$value}}
+           </ion-row>
+        </ion-card>
+        <div class="input">
+           <ion-item class="updShopDetails">
+              <ion-textarea [(ngModel)]="shopDetails" placeholder="Update shop details" clearInput></ion-textarea>
+           </ion-item>
+           <button ion-button full (click)="updateShopDetails()" value="shopDet" class="upShpD">Update shop details </button>
+        </div>
+     </ion-slide>
+     <ion-slide>
+        <ion-item>
+           <button ion-button full (click)="showCharts(eldersCount,youngersCount)" class="carts">SHOW CHARTS</button>
+        </ion-item>
+        <div>
+           <ion-card>
+              <ion-card-header>
+                 Age Chart
+              </ion-card-header>
+              <ion-card-content>
+                 <canvas #doughnutCanvas></canvas>
+                 <ion-item>
+                    <p>This Chart Shows That The Customers<br> Who are in Different Ages</p>
+                 </ion-item>
+              </ion-card-content>
+           </ion-card>
+           <br>
+        </div>
+     </ion-slide>
+  </ion-slides>
+</ion-content>

@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+     <ion-title class='bounce'>ADD CUSTOMERS</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <video autoplay loop src="assets/video/bcV.mp4"  [muted]=true></video>
+  <div class="input">
+     <ion-item>
+        <ion-label stacked>What's your name?</ion-label>
+        <ion-input [(ngModel)]="name" placeholder="Customer Name" clearInput></ion-input>
+     </ion-item>
+     <ion-item>
+        <ion-label stacked>What's your Age?</ion-label>
+        <ion-input [(ngModel)]="age" placeholder="only numeric(0<age<100)" clearInput></ion-input>
+     </ion-item>
+     <ion-item>
+        <ion-label stacked>What's your Chest Size(cm)?</ion-label>
+        <ion-input [(ngModel)]="chest" placeholder="only numeric(50<chest<120)" clearInput></ion-input>
+     </ion-item>
+     <ion-item>
+        <ion-label stacked>What's your Waist Size(cm)?</ion-label>
+        <ion-input [(ngModel)]="waist" placeholder="only numeric(50<waist<120)" clearInput></ion-input>
+     </ion-item>
+     <button ion-button full (click)="addUser()" [disabled]="!results(name, age, waist, chest)">Add a Customer </button>
+  </div>
+  <ion-card id="customers">
+     <ion-item *ngFor="let cust of customerDetails | async">
+        <div class="col col-33">
+           <img  class="full-image" src="assets/imgs/22.jpg"/>
+        </div>
+        <div >{{ cust.name }}</div>
+        <div >Age:{{ cust.age }}</div>
+        <div >Waist Size:{{ cust.waist }}</div>
+        <div >Chest Size:{{ cust.chest }}</div>
+        <button ion-button class='removeButton' (click)=" removeUser(cust.$key)">Remove User Info</button>
+        <button ion-button class='showExample' (click)=" showExample(cust.name,cust.age,cust.waist,cust.chest)">DEMO</button>
+        <hr>
+     </ion-item>
+  </ion-card>
+</ion-content>

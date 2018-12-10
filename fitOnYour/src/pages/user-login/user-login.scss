@@ -1,0 +1,38 @@
+page-user-login {
+    ion-content {
+        background-image:  url('../assets/imgs/back1.png');
+         
+         opacity: 0.89;
+         background-repeat: repeat;
+         background-color: #334fec27;
+         width: 600px;
+         height: 10000px;
+        //background-size: 500px 500px 30px 30px;
+         
+     
+     
+       }
+    
+#content{
+
+    margin-top: 200px;
+    margin-left: 4%;
+    position: fixed;
+    margin-right: 0%;
+    opacity: 8;
+    
+}
+#userImage{
+    position: fixed;
+    margin-left: 8em;
+    margin-top:12px;
+    opacity: .8;
+    color: blue;
+}
+
+.form-error{
+    font-size: 60%;
+    font-weight: bold;
+    color: red;
+}
+}

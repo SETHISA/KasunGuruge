@@ -1,0 +1,57 @@
+<ion-content padding>
+  <span  class="pulse" >FIT~ON YourSELF</span>
+  <button (click)="logOut()" icon-only  ion-button class="logout">
+     <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
+  </button>
+  <video autoplay loop src="assets/video/bcV.mp4" [muted]=true></video>
+  <!--Background Video -->
+  <div id="block">
+     <div *ngIf="results then thenBlock "></div>
+     <ng-template #thenBlock id="thenBlock">
+        <div *ngIf="results.text then thenBlock else elseBlock"></div>
+        <ng-template #thenBlock>
+           <ion-card id="QRresult">
+              <ion-card-header>
+                 <ion-icon name="qr-scanner"></ion-icon>
+                 CODE RESULTS                   <!--check QR code results-->
+              </ion-card-header>
+              <ion-card-content>
+                 <div>
+                    <button ion-button full (click)="tryQR(results.text)">
+                       <b>APPLY</b>
+                       <ion-icon name="finger-print"></ion-icon>
+                    </button>
+                 </div>
+              </ion-card-content>
+           </ion-card>
+        </ng-template>
+        <ng-template #elseBlock>
+           <ion-card>
+              <ion-card-header style="background-color:red; size: 23px">
+                 Please Scan the
+                 <ion-icon name="qr-scanner"></ion-icon>
+                 code
+              </ion-card-header>
+           </ion-card>
+        </ng-template>
+     </ng-template>
+     <ion-card (click)="scanBarcode()">
+        <div class="col col-33">
+           <img  class="full-image" src="assets/imgs/qr.png"/>
+        </div>
+        <div class="items">SCAN QR CODE</div>
+     </ion-card>
+     <ion-card (click)="nextPage()">
+        <div class="col col-33">
+           <img  class="full-image" src="assets/imgs/23.png"/>
+        </div>
+        <div class="items">ADD CUSTOMERS</div>
+     </ion-card>
+     <ion-card (click)="showCart()">
+        <div class="col col-33">
+           <img  class="full-image" src="assets/imgs/cart.png"/>
+        </div>
+        <div class="items">SHOPPING CART</div>
+     </ion-card>
+  </div>
+</ion-content>

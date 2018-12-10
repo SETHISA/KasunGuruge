@@ -1,0 +1,120 @@
+page-show-cart {
+    .logout{
+        
+        float: right;
+    }
+    ion-title{
+        margin-left: 0%;
+        margin-right: 0%;
+        align-content: center;
+    }
+    .shopD{
+        height: 32em;
+        margin-top:-15em;;
+        position: fixed;
+        margin-left: 0.5em;
+        overflow:scroll;
+        text-justify: auto;
+        background-color: aliceblue;    
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+          }
+          .shopTitle{
+       
+   
+            margin-top:-15em;;
+            position: fixed;
+            margin-left: 5.9em;
+        }
+        .shopTitle1{
+           
+         opacity: 5;
+         color: rgb(192, 124, 41);
+        }
+        .main{
+            margin-left: 4.2em;
+           
+        }
+        .main1{
+         color:green;
+        }
+        .name{
+            font-size: 12px;
+            margin-left: 1em;
+            position: absolute;
+        }
+
+       
+        .time{
+            font-size: 12px;
+            margin-left: 10em;
+            position: relative;
+        }
+
+        .remove{
+            margin-left: 2em;
+            color: bisque;
+            background-color: rgb(231, 3, 22);
+        }
+        
+        .cartDetails{
+            margin-top:0em;
+        }
+        .remove1{
+            position: fixed;
+            margin-top: -5em;;
+            margin-left: 4.5em;
+            color: red;
+        }
+        .time1{
+            position: fixed;
+            margin-top: -5em;;
+            margin-left: -1.8em;
+            color: rgb(72, 17, 202);
+        }
+
+        .name1{
+            position: fixed;
+            margin-top: -5em;;
+            margin-left: -9em;
+            color: rgb(35, 182, 21);
+        }
+       
+
+        
+        td{
+            margin-left:50%; 
+            margin-top: -50%;
+            
+        }
+        .table1{
+            margin-left:50%; 
+            margin-top: -50%;
+        }
+        .table2{
+            margin-left:0%; 
+            margin-top: -10%;
+        }
+        // ion-card{
+        //     margin-top: -20px;
+        //     position: fixed;;
+        //     overflow:scroll
+        // }
+        .shopCart{
+            width: 30px;
+        }
+        .fab1{
+            size: .2cm;
+            height: 30px;
+            width: 30px;
+            color: bisque;
+            background-color: black;
+            margin-left: 10%;
+            margin-top: -29%;
+        }
+        .imageUrl{
+            margin-top: -60%;
+            margin-right: 10%;
+            height: 50px;
+            width: 50px;
+        }
+}

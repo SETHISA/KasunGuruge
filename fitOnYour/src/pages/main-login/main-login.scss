@@ -1,0 +1,103 @@
+page-main-login {
+  .content {
+   background-image:  url('../assets/imgs/background.jpg');
+    
+    opacity: 0.89;
+    background-repeat: repeat;
+    background-color: #334fec27;
+    width: 600px;
+    height: 10000px;
+   //background-size: 500px 500px 30px 30px;
+    
+
+
+  }
+  
+   .admin{
+        position: fixed;
+        text-align: center;
+        margin-left: 23%;
+        margin-right: 0%;
+        opacity: 8;
+        box-shadow: 0 0px 1px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        border-radius: 0.1px;
+       margin-top: 75%;
+       height: 100px; 
+       opacity: 5;
+       width: 100px;
+
+        
+      }
+      .user{
+        position: fixed;
+        text-align: center;
+        margin-left: 23%;
+        margin-right: 0%;
+        opacity: 8;
+        box-shadow: 0 0px 1px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        border-radius: 0.1px;
+       margin-top: 15em;
+       height: 100px;
+       width: 100px;
+       opacity: 5;
+      }
+
+      #admin{
+        position: fixed;
+        margin-left: 28%;
+        margin-right: 0%;
+        opacity: 50;
+        margin-top: 70%;
+        color: black;
+        z-index: 3;
+        font-weight: bold;
+      }
+      #user{
+        position: fixed;
+        margin-left: 28%;
+        margin-right: 0%;
+        opacity: 50;
+        margin-top:180px;
+        color: black;
+        z-index: 9;
+        font-weight: bold;
+        
+      }
+      #head{
+        position: fixed;
+        margin-left: 24%;
+        margin-right: 0%;
+        opacity: 50;
+        margin-top: 8em;
+        color: rgb(241, 174, 30);
+        z-index: 9;
+        font-weight: bold;
+      }
+      .logo{
+        position: fixed;
+        margin-top: 0%;
+        margin-left: 24%;
+        width: 100px;
+        height: 100px;
+      }
+
+      ion-card {
+        border-radius: 10px 10px 0px 0px;
+        
+        }
+        .full-image{
+          border-radius: 10px 10px 0px 0px;
+
+        }
+
+        .user{
+          background-color: bisque;
+          border-radius: 10px 10px 10px 10px;
+        }
+        .admin{
+          background-color: bisque;
+          border-radius: 10px 10px 10px 10px;
+        }
+}

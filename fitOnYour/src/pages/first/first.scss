@@ -1,0 +1,93 @@
+page-first {
+    ion-card {
+        position: relative;
+        text-align: center;
+        margin-left: 0%;
+        margin-right: 0%;
+        opacity: 0.8;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        border-radius: 2px;
+       
+      }
+
+      .logout{
+        position: fixed;
+        background-color:transparent;
+        float: right;
+        margin-left: 80%;
+        opacity: 1000;
+        
+
+    }
+     
+    
+
+      img{
+        text-align: center ;
+        height:125px;
+        width:90%; 
+      }
+
+
+
+      video {
+        opacity: 1;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    #thenBlock{
+      opacity: 10;
+    }
+
+
+
+    .pulse {
+      position: fixed;
+      margin-left: 9%;
+      margin-top: 2%;
+      font-weight: bold;
+      size: 50px;
+      font-size: 30px;
+      color: snow;
+      text-align: center;
+      vertical-align: middle;
+      opacity: 0.8;
+      
+    
+     
+    }
+    
+  
+
+    ng-template {
+      position: relative;
+        text-align: center;
+        background-color: transparent;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    .col-33 {
+      width: 50%;
+      float:left;
+      opacity: 10;
+    }
+    #block{
+    margin-top: 50%;
+    margin-left: 8%;
+    margin-right: 8%;
+    }
+    .items{
+      margin-top: 15%;
+      opacity: 20;
+      font-weight: bold;
+    }
+}

@@ -1,0 +1,65 @@
+
+   <ion-header>
+    <ion-navbar>
+       <ion-title class="main"><span class="main1">Shopping Cart</span></ion-title>
+    </ion-navbar>
+    <ion-segment color="primary">
+       <ion-segment-button value="Shop_details" (click)="selectedTab(0)">
+          Shopping Cart
+       </ion-segment-button>
+       <ion-segment-button value="Analaysing" (click)="selectedTab(1)">
+          Shop details
+       </ion-segment-button>
+    </ion-segment>
+ </ion-header>
+ <ion-content padding>
+    <ion-slides #slider>
+       <ion-slide>
+          <ion-list>
+             <table class="table1">
+                <tr>
+                   <th><span class="name1">Name</span> </th>
+                   <th><span  class="time1">Date</span> </th>
+                   <th> <span class="remove1">Remove</span></th>
+                </tr>
+             </table>
+             <table class="table2">
+                <tr>
+                   <td>
+                      <ion-item-sliding *ngFor="let  item of  getCartDetails | async" class="cartDetails">
+                         <ion-item >
+                            <span class="name">  {{item.name}} 
+
+                                <ion-fab  >
+                                    <button ion-fab class="fab1"> <ion-icon ios="ios-cart" md="md-cart"></ion-icon></button>
+                                    <ion-fab-list side="right">
+                                      
+
+                                      <img src="{{item.imageUrl}}" class="imageUrl"/>
+                                     
+                                    </ion-fab-list>
+                                  </ion-fab>
+                            </span>
+                           
+                            <span class="time">{{item.time}}</span> 
+                            <button class="remove" io-button color="danger" icon-only (click)="removeItem(item.$key)">
+                               <ion-icon name="trash"></ion-icon>
+                            </button>
+                         </ion-item>
+                      </ion-item-sliding>
+                   </td>
+                </tr>
+             </table>
+             <hr>
+          </ion-list>
+       </ion-slide>
+       <ion-slide >
+          <ion-title class="shopTitle" ><span class="shopTitle1">Shop Details</span></ion-title>
+          <ion-card  class="shopD">
+             <ion-row  *ngFor="let shop of getShopDetails | async"  >
+                {{shop.$value}}
+             </ion-row >
+          </ion-card>
+       </ion-slide>
+    </ion-slides>
+ </ion-content>

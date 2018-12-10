@@ -1,0 +1,74 @@
+page-admin {
+    .logout{
+        position: fixed;
+        background-color:transparent;
+        float: right;
+        margin-left: 30%;
+        margin-top: -2%;
+        color: black;
+
+    }
+    
+    .ios, .md {
+ 
+        page-home {
+     
+            .scroll-content {
+                opacity: 5;
+                background-color: map-get($colors, light);
+            }
+     
+            ion-card-header {
+                font-weight: bold;
+            }
+     
+        }
+     
+    }
+    .shopD{
+        margin-top:-6.5em;;
+        position: fixed;
+      margin-left: 0%;
+        position: fixed;
+       height: 100px;
+       width: 380px;
+          }
+    .updShopDetails{
+        margin-top:5em;;
+        position: relative;
+    }
+   .shopTitle{
+       
+   
+       margin-top:-8em;;
+       position: fixed;
+       margin-left: 5em;
+   }
+   .shopTitle1{
+       position: fixed;
+    opacity: 5;
+    color: rgb(192, 124, 41);
+   }
+   .upShpD{
+       opacity: 4;
+    background-color: rgb(192, 124, 41);
+   }
+   .carts{
+    opacity: 4;
+    background-color: rgb(192, 124, 41);
+   }
+
+   .main{
+       margin-left: 6em;
+      
+   }
+   .main1{
+    color: red;
+   }
+  
+   
+   ion-textarea{
+    height: 100px;
+    width: 100px;
+   }
+}

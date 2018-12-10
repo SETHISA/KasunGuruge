@@ -1,0 +1,74 @@
+page-try-result {
+    ion-card {
+        position: relative;
+        text-align: center;
+        background-color: bisque;
+      }
+
+      .main{
+          opacity: 0.7;
+          background-color: rgb(121, 126, 126);
+      }
+      .child{
+          margin-top: 5%;
+      }
+      video {
+        opacity: 1;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    h2{
+        text-align: center;
+        font-size: 6.0em;
+        text-transform:uppercase;
+        width: 100%;
+        font-weight: bold;
+        color: rgb(15, 14, 14);
+    }
+
+    #warning{
+        text-align: center;
+        color:red;
+        font-size: 2.0em;
+        width: 100%;
+        font-weight: bold;
+    }
+
+    button{
+        margin-left: 25px;
+        margin-right: 0px;
+        margin-top: 50%
+    }
+    ion-title{
+        size: 6px;
+        color: blue;
+    }
+
+    ng-template {
+
+        font-weight: bold;
+        font-size:2em;
+    }
+#user{
+    font-size: 1em;
+}
+#firstTemplate{
+    background-color: rgb(162, 163, 163);
+    font-weight: bold;
+}
+
+.show{
+    background-color: rgb(141, 87, 15);
+}
+
+
+
+}

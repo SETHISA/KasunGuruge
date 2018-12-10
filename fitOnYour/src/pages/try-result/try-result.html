@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar>
+     <ion-title>
+        <ion-icon name="arrow-dropdown-circle"></ion-icon>
+        TRY THE
+        <ion-icon name="qr-scanner"> </ion-icon>
+        CODE
+     </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-card class="main">
+     <div *ngIf="(a!='[]') then thenBlock else elseBlock"></div>
+     <ng-template #thenBlock id="firstTemplate">
+        <ion-icon name="arrow-down">
+           WITH
+           <ion-icon name="man"></ion-icon>
+           DETAILS
+        </ion-icon>
+        <ion-card class="child">
+           <div *ngIf="(QRavailableCheck>=0) then thenBlock else elseBlock"></div>
+           <ng-template #thenBlock>
+              <ion-item *ngFor="let cust of customerDetails | async">
+                 <h2>
+                    <b id="user">
+                       For
+                       <ion-icon name="man"></ion-icon>
+                       :
+                    </b>
+                    {{ cust.name }} 
+                 </h2>
+                 <button ion-button full (click)="showResults(cust.name,cust.age,cust.waist,qrResults,cust.chest)" class="show">
+                    Show   
+                    <ion-icon name="play"> </ion-icon>
+                 </button>
+              </ion-item>
+           </ng-template>
+           <ng-template #elseBlock>
+              <div id="warning">
+                 THE QR CODE
+                 <ion-icon name="qr-scanner"></ion-icon>
+                 IS
+                 <br>INVALID
+                 <br>TRY WITH ANOTHER
+              </div>
+           </ng-template>
+        </ion-card>
+     </ng-template>
+     <ng-template #elseBlock>
+        <div id="warning">
+           NO USER
+           <ion-icon name="man"></ion-icon>
+           INFO
+           <br>PLEASE ENTER USER INFO
+           <br> AND TRY AGAIN
+        </div>
+     </ng-template>
+  </ion-card>
+  <video autoplay loop src="assets/video/bcV.mp4"  [muted]=true></video>
+</ion-content>

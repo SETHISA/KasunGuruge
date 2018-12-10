@@ -1,0 +1,115 @@
+page-admin-login {
+    .login-content {
+      
+        
+        background-image:  url('../assets/imgs/back1.png');
+        opacity: 1;
+    
+        .logo-row {
+          position: absolute;
+          margin-top: 89px;
+          padding-top: 50px;
+          padding-bottom: 10px;
+        }
+     
+        .login-box {
+          // background: rgb(179, 219, 210);
+          // padding: 0px 20px 0px 20px;
+          margin-top: 250px;
+          opacity: 0.8;
+          margin-bottom: 30px;
+          // border-radius: 20px !important;
+        }
+     
+        ion-row {
+           align-items: center;
+           text-align: center;
+         }
+    
+    
+         .pulse {
+          position: fixed;
+          margin-left: 10%;
+          margin-top: -7%;
+          // color: rgb(236, 232, 232);
+          font-weight: bold;
+          size: 100px;
+          font-size: 80px;
+          font-family: 'Anton', sans-serif;
+          text-align: center;
+          vertical-align: middle;
+          opacity: 3;
+          
+        
+         
+        }
+    .image{
+    opacity: 4;
+    color: #7c2121;
+    }
+        .backImage {
+          opacity: 1;
+          position: fixed;
+          margin-bottom: 0%;
+          margin-top: 0%;
+          min-width: 100%;
+          min-height: 100%;
+          width: auto;
+          height: auto;
+          z-index: -100;
+          transform: translateX(-50%) translateY(-50%);
+      }
+         ion-item {
+             border-radius: 32px !important;
+             padding-left: 20px !important;
+            background: rgb(205, 216, 215);
+             font-size: 15px;
+             margin-bottom: 20px;
+             
+             border-bottom: 0px !important;
+             box-shadow: none !important;
+             height: 90px;
+            
+         }
+     
+         
+     
+     
+         .submit-btn {
+           background: rgb(66, 183, 216);
+           border-radius: 30px !important;
+          //  border: 1px solid #ffffff;
+          margin-top:5%;
+           padding-bottom: 9px;
+           width: 32%;
+           margin-left: 30%;
+           margin-top: -10px;
+          padding-top: 1px;
+          position: absolute;
+         }
+        
+        #login{
+          font-weight: bold;
+          margin-top: 10px;
+          width: 100px;
+        }
+      }
+      .input{
+        height: 4em;
+      }
+      .Password{
+        font-size: 20px;
+        opacity: 343;
+        color: #7c2121;
+      }
+      .Username{
+        font-size: 20px;
+        opacity: 343;
+        color: #7c2121;
+      }
+      
+      
+        .back{
+          margin-left: -3%;
+        }
+}

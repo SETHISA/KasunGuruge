@@ -1,0 +1,68 @@
+<ion-content>
+	<img  id="userImage" src="assets/imgs/user.png"/>
+
+
+	
+	<div id="content">
+	   <form (ngSubmit)="login()" [formGroup]="loginForm">
+	   <ion-list inset>
+		  <ion-item [ngClass]="{ invalid: emailErrors.hasError('*', ['touched', 'dirty']) }">
+			 <ion-input type="text" placeholder="Email" formControlName="email"></ion-input>
+		  </ion-item>
+		  <div ngxErrors="email" #emailErrors="ngxErrors">
+			 <div [ngxError]="['email', 'required']" [when]="['touched', 'dirty']">It should be a valid email
+		  </div>
+	</div>
+	<ion-item [ngClass]="{ invalid: passwordErrors.hasError('*', ['touched']) }">
+	<ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+	</ion-item>
+	<div ngxErrors="password" #passwordErrors="ngxErrors">
+	<div [ngxError]="['minlength', 'required']" [when]="['touched']">It should be at least 5 characters</div>
+	</div>
+	</ion-list>
+	<div padding-horizontal>
+	   <div class="form-error">{{loginError}}</div>
+	   <button ion-button full type="submit" [disabled]="!loginForm.valid">Log in</button>
+	   <div class="login-footer">
+		  <p>
+			 <a href="#">Forgot password?</a>
+			 If you're a new user, please sign up.
+		  </p>
+	   </div>
+	   <ion-list>
+		  <button ion-button icon-left block clear (click)="loginWithGoogle()">
+			 <ion-icon name="logo-google"></ion-icon>
+			 Log in with Google
+		  </button>
+		  <!-- <button ion-button icon-left block clear (click)="loginWithFb()">
+			<ion-icon name="logo-facebook"></ion-icon>
+			FB
+		 </button>
+		 <button ion-button icon-left block clear (click)="loginWithGithub()">
+			<ion-icon name="logo-github"></ion-icon>
+			GITHUB
+		 </button> -->
+	
+		  <button ion-button icon-left block clear (click)="signup()">
+			 <ion-icon name="person-add"></ion-icon>
+			 Sign up
+		  </button>
+		  <button ion-button icon-left block clear (click)="back()">
+			 <ion-icon name="back"></ion-icon>
+			 Back
+		  </button>
+
+		 
+		  <!-- <button ion-button icon-left block clear (click)="res()">
+			 <ion-icon name="res"></ion-icon>
+			 res
+			 </button>
+			 <button ion-button icon-left block clear (click)="try()">
+				 <ion-icon name="try"></ion-icon>
+				 try
+			 </button> -->
+	   </ion-list>
+	</div>
+	</form>
+	</div>
+ </ion-content>

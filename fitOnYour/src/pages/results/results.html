@@ -1,0 +1,81 @@
+
+   <ion-header>
+    <ion-navbar>
+       <ion-item>
+          <span id="hi" >Welcome! </span><span id="name">{{name}}</span> 
+          <span id="hi" > Your, </span>
+       </ion-item>
+    </ion-navbar>
+ </ion-header>
+ <ion-content padding>
+    <ion-item *ngIf="(89<ovarrallMatchPercentage)&&(ovarrallMatchPercentage<=130)">
+       <img [src]="imageUrl" class="pinch-zoom-image FitShirtimage" absolute-drag>
+       <ion-item class="avgBody">
+          <img src="assets/imgs/avarageBody.JPG">
+       </ion-item>
+    </ion-item>
+    <ion-item *ngIf="(ovarrallMatchPercentage>0)&&(ovarrallMatchPercentage<90)">
+       <img [src]="imageUrl" class="pinch-zoom-image LooseShirtimage" absolute-drag>
+       <ion-item class="thinBody">
+          <img src="assets/imgs/thinBody.JPG">
+       </ion-item>
+    </ion-item>
+    <ion-item *ngIf="130<ovarrallMatchPercentage">
+       <img [src]="imageUrl" class="pinch-zoom-image TightShirtimage" absolute-drag>
+       <ion-item class="fatBody">
+          <img src="assets/imgs/fatBody.JPG">
+       </ion-item>
+    </ion-item>
+    <ion-item *ngIf="ovarrallMatchPercentage==0">
+       <h2>PLEASE ENTER RIGHT USER DETAILS</h2>
+    </ion-item>
+    <ion-item *ngIf="ovarrallMatchPercentage=='INFINITY'">
+       <h2>PLEASE USE VALID QR CODE</h2>
+    </ion-item>
+    <ion-item>
+       Waist Matching with chosen Dress:
+       <!-- <span id='waistP' class='pulse' [ngStyle]="{'color': color }">{{waistMatchPercentage}}%</span> -->
+       <div class="progress-outer">
+          <div class="progress-inner" [style.width]="waistMatchPercentage+ '%'">
+             {{waistMatchPercentage}}%
+          </div>
+       </div>
+    </ion-item>
+    <ion-item>
+       Chest Matching with chosen Dress:
+       <!-- <span id='chestP' class='pulse' [ngStyle]="{'color': color }">{{chestMatchPercentage}}%</span> -->
+       <div class="progress-outer">
+          <div class="progress-inner" [style.width]="chestMatchPercentage+ '%'">
+             {{chestMatchPercentage}}%
+          </div>
+       </div>
+    </ion-item>
+    <ion-item class="overall  pulse">
+       OVERALL MATCHING
+       <br>
+       <span id='OvrP' [ngStyle]="{'color': color }">{{results}}</span>
+    </ion-item>
+    <ion-row>
+       <ion-col>
+          <button ion-button (click)="addItemToCart()" class="Cart">
+             Add To Shopping 
+             <ion-icon ios="ios-cart" md="md-cart">Cart</ion-icon>
+             !
+          </button>
+       </ion-col>
+    </ion-row>
+    <ion-list>
+       <ion-item-sliding *ngFor="let  item of  getCartDetails | async">
+          <ion-item>
+             Successfully add  {{item.name}} TO 
+             <ion-icon ios="ios-cart" md="md-cart"></ion-icon>
+          </ion-item>
+          <ion-item-options side="right">
+             <button io-button color="danger" icon-only (click)="removeItem(item.$key)">
+                <ion-icon name="trash"></ion-icon>
+             </button>
+          </ion-item-options>
+       </ion-item-sliding>
+       <hr>
+    </ion-list>
+ </ion-content>

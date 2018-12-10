@@ -1,0 +1,36 @@
+<ion-content class="login-content" padding>
+  <span  class="pulse" >FIT~ON<br>YourSELF</span>
+  <ion-row class="logo-row">
+     <ion-col></ion-col>
+     <!-- <ion-col width-60 class="image">
+        <img src="assets/imgs/LoginIcon.png"/>
+        </ion-col> -->
+     <ion-col></ion-col>
+  </ion-row>
+  <div class="login-box">
+     <ion-row>
+        <ion-col class="inputbox">
+           <ion-list inset>
+              <ion-item>
+                 <ion-label floating class="Username">Username</ion-label>
+                 <ion-input type="text" #username class="input"></ion-input>
+              </ion-item>
+              <ion-item>
+                 <ion-label floating class="Password">Password</ion-label>
+                 <ion-input type="password" #password class="input"></ion-input>
+              </ion-item>
+           </ion-list>
+        </ion-col>
+     </ion-row>
+     <ion-row class="loginButton">
+        <ion-col class="signup-col">
+           <button block ion-button (click)="login()" class="submit-btn">
+              <ion-icon ios="ios-log-in" md="md-log-in"></ion-icon>
+           </button>
+        </ion-col>
+     </ion-row>
+  </div>
+  <h1>Hello {{displayName}}</h1>
+  <button ion-button outline (click)="signInWithFacebook()">Login</button>  
+  <button ion-button outline (click)="signOut()">Logout</button>
+</ion-content>

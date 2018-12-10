@@ -1,0 +1,37 @@
+<ion-content class="login-content" padding>
+  <span  class="pulse" > <img  class="full-image" src="assets/imgs/admin.png"/></span>
+  <ion-row class="logo-row">
+     <ion-col></ion-col>
+     <!-- <ion-col width-60 class="image">
+        <img src="assets/imgs/LoginIcon.png"/>
+        </ion-col> -->
+     <ion-col></ion-col>
+  </ion-row>
+  <div class="login-box">
+     <ion-row>
+        <ion-col class="inputbox">
+           <ion-list inset>
+              <ion-item>
+                 <ion-label floating class="Username">Username</ion-label>
+                 <ion-input type="text" #username class="input"></ion-input>
+              </ion-item>
+              <ion-item>
+                 <ion-label floating class="Password">Password</ion-label>
+                 <ion-input type="password" #password class="input"></ion-input>
+              </ion-item>
+           </ion-list>
+        </ion-col>
+     </ion-row>
+     <ion-row class="loginButton">
+        <ion-col class="signup-col">
+           <button block ion-button (click)="login()" class="submit-btn">
+              <ion-icon ios="ios-log-in" md="md-log-in" id="login"></ion-icon>
+           </button>
+        </ion-col>
+     </ion-row>
+  </div>
+  <button ion-button icon-left block clear (click)="back()" class="back">
+    <ion-icon name="back"></ion-icon>
+    Back
+ </button>
+</ion-content>

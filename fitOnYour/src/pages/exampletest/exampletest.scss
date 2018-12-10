@@ -1,0 +1,133 @@
+page-exampletest {
+    ion-content{
+        background-image:  url('../assets/imgs/bg.jpg');
+    
+        opacity: 0.89;
+        background-repeat: repeat;
+        
+        
+
+    }
+   
+    ion-title{
+
+        size: 32px;
+        color: blue;
+        
+            }
+        
+        #waistP{
+        
+            font-weight: bold
+        }
+        #chestP{
+        
+            font-weight: bold
+        }
+        
+        #OvrP{
+            
+            font-weight: bold;
+            font-size: 55px;
+        }
+        ion-item{
+            font-weight: bold;
+                color: rgb(29, 25, 25);
+                
+        }
+        
+        .overall{
+            text-align: center;
+        }
+        
+        
+        #name{
+            
+            text-transform:uppercase;
+            margin-left: 10%;
+            font-size: 1.0em;
+            text-align: center;
+            font-weight: bold;
+            color:black;
+          
+        }
+        #hi{
+            margin-left: 10%;
+            font-size: 1.0em;
+            font-weight: bold;
+            color: brown;
+        }
+        .FitShirtimage{
+            position :absolute;
+            z-index: 1;
+            margin-left: 29%;
+            margin-top: 13.5%;
+            width: 130px;
+            height: 130px;
+        }
+        .LooseShirtimage{
+            position :absolute;
+            margin-left: 26%;
+            margin-top: 15%;
+            z-index: 1;
+            height: 155px;
+            width: 155px;
+        }
+        .TightShirtimage{
+            position :absolute;
+            margin-left: 29%;
+            margin-top: 17%;
+            z-index: 1;
+            height: 120px;
+            width: 128px;
+        }
+        
+        
+      
+        
+         
+         
+        #slides{
+            height: 50%;
+            width: 50%;
+            align-content: center;
+        }
+      
+       
+       
+          .progress-outer {
+              width: 96%;
+              margin: 10px 2%;
+              padding: 3px;
+              text-align: center;
+              background-color: #f4f4f4;
+              border: 1px solid #dcdcdc;
+              color: #fff;
+              border-radius: 20px;
+          }
+       
+          .progress-inner {
+              min-width: 15%;
+              white-space: nowrap;
+              overflow: hidden;
+              padding: 5px;
+              border-radius: 20px;
+              background-color: map-get($colors, primary);
+          }
+
+          .avgBody{
+            margin-top: -8.1%;
+            width: 61%;
+            margin-left: 20%;
+          }  
+          .thinBody{
+            margin-top: -8.1%;
+            width: 61%;
+            margin-left: 20%;
+                      }
+          .fatBody{
+            margin-top: -8.1%;
+            width: 61%;
+            margin-left: 20%;
+          }
+}
